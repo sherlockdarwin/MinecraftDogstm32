@@ -4,6 +4,8 @@
 #include "car.h"
 #include "openmv.h"
 #include "timer.h"
+#include "musictimer.h"
+
 
 uint16_t falling;
 uint16_t music = 1;
@@ -16,8 +18,10 @@ int main(void)
 	RCC_APB1PeriphClockCmd(RCC_APB1Periph_USART3,ENABLE);
 	RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM2,ENABLE);
 	RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM3,ENABLE);
+	RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM4,ENABLE);
 	TIM_InternalClockConfig(TIM2);
 	TIM_InternalClockConfig(TIM3);
+	TIM_InternalClockConfig(TIM4);
 	
 	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);
 	
@@ -27,6 +31,7 @@ int main(void)
 	car_Init();
 	openmv_Init();
 	timer_Init();
+	musictimer_Init()
 	volume(25);
 	playmusic(1);
 	
@@ -38,13 +43,7 @@ int main(void)
 			volume(30);
 			GPIO_ResetBits(GPIOB, GPIO_Pin_8);
 			music = 2;
-		}
-		if(!falling&&music==2)
-		{
-			GPIO_SetBits(GPIOB, GPIO_Pin_8);
-			volume(25);
-			playmusic(1);
-			music = 1;
+			TIM_SetCounter(TIM4, 0);
 		}
 		
 		//接收openmv
