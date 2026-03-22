@@ -31,7 +31,7 @@ int main(void)
 	car_Init();
 	openmv_Init();
 	timer_Init();
-	musictimer_Init()
+	musictimer_Init();
 	volume(25);
 	playmusic(1);
 	
