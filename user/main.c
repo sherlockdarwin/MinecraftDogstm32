@@ -43,7 +43,7 @@ int main(void)
 			volume(30);
 			GPIO_ResetBits(GPIOB, GPIO_Pin_8);
 			music = 2;
-			TIM_SetCounter(TIM4, 0);
+			TIM_SetCounter(TIM4, 300000);
 		}
 		
 		//接收openmv
