@@ -9,8 +9,8 @@ void musictimer_Init(void)
 	TIM_TimeBaseInitTypeDef musictimerTIM;
 	musictimerTIM.TIM_ClockDivision = TIM_CKD_DIV1;
 	musictimerTIM.TIM_CounterMode = TIM_CounterMode_Up;
-	musictimerTIM.TIM_Period = 400000 - 1;
-	musictimerTIM.TIM_Prescaler = 7200 - 1;
+	musictimerTIM.TIM_Period = 45000 - 1;
+	musictimerTIM.TIM_Prescaler = 64000 - 1;
 	musictimerTIM.TIM_RepetitionCounter = 0;
 	TIM_TimeBaseInit(TIM4, &musictimerTIM);
 	

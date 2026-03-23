@@ -33,3 +33,4 @@
 .\objects\main.o: .\hardware\car.h
 .\objects\main.o: .\hardware\openmv.h
 .\objects\main.o: .\system\timer.h
+.\objects\main.o: .\system\musictimer.h

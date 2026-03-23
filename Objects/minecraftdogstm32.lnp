@@ -2,6 +2,7 @@
 ".\objects\main.o"
 ".\objects\stm32f10x_it.o"
 ".\objects\timer.o"
+".\objects\musictimer.o"
 ".\objects\hall.o"
 ".\objects\music.o"
 ".\objects\car.o"
