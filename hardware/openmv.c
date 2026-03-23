@@ -7,7 +7,7 @@
 #define OPENMV_BUF_LEN 30
 char openmv_buf[OPENMV_BUF_LEN];
 uint16_t buf_index = 0;
-uint16_t openmvgetflag = 0;
+volatile uint16_t openmvgetflag = 0;
 int openmv_X = 0;
 int openmv_Y = 0;
 int openmv_R = 0;

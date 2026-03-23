@@ -7,8 +7,8 @@
 #include "musictimer.h"
 
 
-uint16_t falling;
-uint16_t music = 1;
+volatile uint16_t falling;
+volatile uint16_t music = 1;
 
 int main(void)
 {
