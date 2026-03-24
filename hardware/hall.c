@@ -24,7 +24,7 @@ void hall_Init(void)
 	NVIC_InitTypeDef hallNVIC;
 	hallNVIC.NVIC_IRQChannel = EXTI1_IRQn;
 	hallNVIC.NVIC_IRQChannelCmd = ENABLE;
-	hallNVIC.NVIC_IRQChannelPreemptionPriority = 0;
+	hallNVIC.NVIC_IRQChannelPreemptionPriority = 1;
 	hallNVIC.NVIC_IRQChannelSubPriority = 1;
 	NVIC_Init(&hallNVIC);
 	

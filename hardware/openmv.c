@@ -36,7 +36,7 @@ void openmv_Init(void)
 	NVIC_InitTypeDef openmvNVIC;
 	openmvNVIC.NVIC_IRQChannel = USART3_IRQn;
 	openmvNVIC.NVIC_IRQChannelCmd = ENABLE;
-	openmvNVIC.NVIC_IRQChannelPreemptionPriority = 1;
+	openmvNVIC.NVIC_IRQChannelPreemptionPriority = 0;
 	openmvNVIC.NVIC_IRQChannelSubPriority = 1;
 	NVIC_Init(&openmvNVIC);
 	
